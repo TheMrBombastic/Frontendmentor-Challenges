@@ -46,7 +46,6 @@ Fluency.
 ### Continued development
 
 I would like to play around with flex and grid for nice responsivness.
-ete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
