@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet"
+           href="https://fonts.googleapis.com/css?family=Lexend+Deca">
+  <link rel="stylesheet"
+           href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:400,700">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+ 
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+
+<body onresize="closeslider() ,checkbrake()">
+
+  <img id="blackbackground" src="images/blackbackground.png">
+  <img class="logo" src="images/logo.svg" alt="snap logo"> 
+  <img onclick="activateslider()" src="images/icon-menu.svg" id="hamburger">
+  <img onclick="activateslider()" src="images/icon-close-menu.svg" id="thex">
+      
+    
+
+
+  <header id="menu">
+    
+    <ul  onclick="activatefeatures()">Features <img id="arrowdown1" src="images/icon-arrow-down.svg"><img id="arrowup1" src="images/icon-arrow-up.svg"> 
+      <div id="lw1" class="linkwrapper lw1">
+        <li><img class="icon" src="images/icon-todo.svg" alt="icon"><a href="">Todo List</a></li>
+        <li><img class="icon" src="images/icon-calendar.svg" alt="icon"><a href="">Calendar</a></li>
+        <li><img class="icon" src="images/icon-reminders.svg" alt="icon"><a href="">Reminders</a></li>
+        <li><img class="icon" src="images/icon-planning.svg" alt="icon"><a href="">Planning</a></li>
+      </div>
+    </ul>
+    
+    <ul onclick="activatecompany()">Company <img id="arrowdown2" src="images/icon-arrow-down.svg"><img id="arrowup2" src="images/icon-arrow-up.svg">
+      <div id="lw2" class="linkwrapper lw2">
+        <li><a href="">History</a></li>
+        <li><a href="">Our Team</a></li>
+        <li><a href="">Blog</a></li>
+      </div>
+    </ul>
+    
+    <a href="">Careers</a>
+    <a href="">About</a>
+
+    <div class="right">
+      <a class="mittig1" href="">Login</a>
+      <a class="mittig2" href="">Register</a>
+    </div>
+ 
+  </header>
+
+ 
+
+
+<div style="clear:both;" class="grid">
+  <img class="bildklein" src="images/image-hero-mobile.png">
+  <img class="bildgroß"  src="images/image-hero-desktop.png">
+    <main>
+      <h1  id="heading" >Make remote work</h1>
+
+      <p>Get your team in sync, no matter your location. Streamline processes, 
+      create team rituals, and watch productivity soar.</p>
+
+      <a href="">Learn more</a>
+
+      <div class="containerlogos">
+        <img class="partners1" src="images/client-databiz.svg" alt="logo">
+        <img class="partners2" src="images/client-audiophile.svg" alt="logo">
+        <img class="partners3" src="images/client-meet.svg" alt="logo">
+        <img class="partners4" src="images/client-maker.svg" alt="logo">
+      </div>
+
+    </main>
+</div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mr Bombastic</a>.
+  </div>
+
+
+ <script type="text/javascript" src="slider.js"></script>
+
+
+</body>
+</html>
