@@ -153,22 +153,24 @@ span{
 }
 nav>a{
     display:block;
-     text-decoration: none;
+    text-decoration: none;
     text-align: center;
     font-family: var(-ff-main);
     margin-bottom:2em;
     font-weight: 700;}
 nav{
     position:absolute;
+    display:none;
     top:6.44em;
     left:calc(50vw - 10.22em);
     width:20.43em;
     height:18.19em;
     background-color: white;
     padding-top:2.875em;
-    transform: translateX(-100vw);
+   
     z-index:10;
     border-radius: 10px;
+
     
 }
 

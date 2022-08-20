@@ -35,7 +35,7 @@ function setnewslider(){
     displayslider.style.display="none";
     var displaycircle=document.getElementById('sb'+slidercounter);
     displaycircle.style.backgroundColor="white";
-    const deltaX=touchstartX-touchendX;
+    var deltaX=touchstartX-touchendX;
     if(deltaX<-50){
         console.log('right swiped');
         slidercounter++;}
