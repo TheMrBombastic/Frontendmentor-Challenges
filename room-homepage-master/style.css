@@ -1,0 +1,334 @@
+
+
+/*-----------------------*/
+/*Reset                  */
+/*-----------------------*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture,
+ul {
+    margin: 0; 
+    padding:0;
+}
+
+
+/*-----------------------*/
+/*    Custom Properties  */
+/*-----------------------*/
+:root{
+    --cl-darkgray: hsl(0, 0%, 63%);
+    --cl-black:hsl(0, 0%, 0%);
+    --cl-white: hsl(0, 0%, 100%);
+    --cl-verydarkgray: hsl(0, 0%, 27%);
+}
+
+/*--------------------------------------------------*/
+/*            allgemeines Layout                    */
+/*--------------------------------------------------*/
+p{
+    font-size:12px;
+    font-family:"League Spartan";
+    color:var(--cl-darkgray);}
+
+h1 {
+    font-family:"League Spartan";
+    font-size:28px;}
+
+h2{
+    font-family:"League Spartan";
+}
+
+p{
+    font-size: 12px;
+    line-height: 1.6em;
+}
+
+.notDisplayed{
+    display:none;
+}
+
+.backgroundAnimation{
+    transition: backgroundimage 0.5s ease-in-out;
+}
+
+/*--------------------------------------------------*/
+/*             mobile layout                        */
+/*--------------------------------------------------*/
+
+@media (max-width:920px){
+    header ul{
+        display:none;}
+    
+    .hamburger{
+        position:absolute;
+        left:1em;
+        top:2em;
+    }
+
+    .logo{
+        margin-right:calc(50vw - 31px);
+        margin-top:2em;
+    }
+
+
+    .pictureHeader{
+        background-image: url(images/mobile-image-hero-1.jpg);
+        background-repeat:no-repeat;
+        background-size:cover;
+        width:100vw;
+        height:104vw;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    p{
+        padding-bottom: 2em;
+    }
+
+    h1{
+        padding-bottom:.5em;
+    }
+
+    main{
+        padding:2em 2.5em 2.8em 2.5em;
+    }
+
+    .arrowsMobile{
+        margin-bottom: -3px;
+    }
+    
+    .arrows img{
+        display: block;
+        margin: .72em auto;
+    }
+    
+    .arrows>div{
+        background-color: black;
+        display: inline-block;
+        height:45px;
+        width:45px;
+    }
+    
+    .arrows>div:first-child{
+        margin-right: -4px;
+    }
+    
+    .arrows>div:hover,
+    .arrows>div:active{
+        background-color: var(--cl-verydarkgray);
+    }
+
+    main a{
+        color:var(--cl-black);
+        font-size: 12px;
+        text-decoration: none;
+        letter-spacing: 5px;
+        padding-right:1em;
+    }
+
+    .arrowsDesktop{
+        display:none;
+    }
+
+    .col1 img{
+        width:100vw;
+    }
+
+    h2{
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding-bottom: .8em;
+    }
+
+
+
+    article{
+    padding:2em 2.5em 2.2em 2.5em;
+}
+    article p{
+        padding-bottom:0;
+    }
+
+    .col3 img{
+        width:100vw;
+        display:block;
+    }
+
+}
+
+
+/*--------------------------------------------------*/
+/*             desktop layout                        */
+/*--------------------------------------------------*/
+@media (min-width:920px){
+    .hamburger{
+        display:none;
+
+    }
+
+    .textSlider{
+        overflow: hidden;
+    }
+
+    .pictureHeader{
+        background-image: url(images/desktop-image-hero-1.jpg);
+
+    }
+
+    header{
+        padding-top:4em;
+        padding-left:3.5em;
+        padding-bottom:1em;
+    }
+    .logo{
+        display:inline-block;
+    }
+
+    header ul{
+        display: inline-block;
+        padding-left:7vw;
+    }
+
+    header a {
+        font-family:"League Spartan";
+        color:white;
+        padding-bottom:.3em;
+        font-size: 20px;
+    }
+
+    header a:hover{
+        border-bottom: 3px solid white;
+        border-radius: 2px;
+        
+    }
+
+    header a+a{
+        margin-left:2vw;
+    }
+
+    .arrowsMobile{
+        display: none;
+    }
+
+    .row1{
+        display:flex;
+    }
+
+    .pictureHeader{
+        flex:2 1 58%;
+        background-repeat:no-repeat;
+        background-size:cover;
+        height:67vh;
+    }
+
+    main{
+        flex:1 2 42%;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+        .textSlider{
+       margin-right:calc(8vw - 50px);
+       margin-left:calc(8vw - 50px);
+       margin-top:calc(3vw + 50px);
+        
+    }
+    h1{
+        font-size:3vw;
+        line-height: 3vw;
+        padding-bottom: 1vw;
+    
+    }
+    
+    main p{
+        padding-bottom:1vw;
+        font-size: 16px;
+    }
+
+    main a{
+        color:var(--cl-black);
+        text-decoration: none;
+        letter-spacing: 5px;
+        padding-right:1em;
+        padding-bottom:1vw;
+        letter-spacing: 15px;
+        }
+
+
+
+    .arrowsDesktop{
+        position:relative;
+        top:4px;
+       
+    }
+
+
+    .arrows img{
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+        padding-top:2.1vw;
+    }
+    
+    .arrows>div{
+        background-color: black;
+        display: inline-block;
+        height:5.5vw;
+        width:5.5vw;
+    }
+    
+    .arrows>div:first-child{
+        margin-right: -4px;
+    }
+    
+    .arrows>div:hover,
+    .arrows>div:active{
+        background-color: var(--cl-verydarkgray);
+    }
+
+    .row2{
+        display:flex;
+    }
+
+    h2{
+        font-size:17px;
+        letter-spacing: 6px;
+        text-transform: uppercase;   
+        padding-bottom:1vw;
+    }
+
+    article{
+        margin-right:calc(8vw - 50px);
+        margin-left:calc(8vw - 50px);
+        margin-top:calc(7vw - 60px);
+    }
+
+    article p{
+        font-size: 16px;
+    }
+    .col1 img{
+        width:calc(31vw);
+    }
+
+    .col3 img{
+        width:calc(31vw);
+    }
+
+}
