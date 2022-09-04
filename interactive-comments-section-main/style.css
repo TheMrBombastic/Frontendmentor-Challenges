@@ -1,0 +1,300 @@
+/*-----------------------*/
+/*Reset                  */
+/*-----------------------*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture,
+ul {
+    margin: 0; 
+    padding:0;
+}
+
+
+/*-----------------------*/
+/*    Custom Properties  */
+/*-----------------------*/
+:root{
+    --cl-moderateBlue: hsl(238, 40%, 52%);
+    --cl-softRed: hsl(358, 79%, 66%);
+    --cl-lightGrayishBlue: hsl(239, 57%, 85%);
+    --cl-paleRed: hsl(357, 100%, 86%);
+    --cl-darkBlue: hsl(212, 24%, 26%);
+    --cl-grayishBlue:hsl(211, 10%, 45%);
+    --cl-lightGray: hsl(223, 19%, 93%);
+    --cl-veryLightGray: hsl(228, 33%, 97%);
+    --cl-white: hsl(0, 0%, 100%);
+
+    --ff-main:"Rubik";
+
+
+}
+
+
+
+
+
+/*--------------------------------------------------*/
+/*            allgemeines Layout                    */
+/*--------------------------------------------------*/
+
+
+body{
+    background-color: var(--cl-veryLightGray);
+}
+
+.wrapperMain{
+    max-width: 730px;
+    margin-left: max( 1em, calc(50% - 365px));
+    margin-right: max( 1em,  calc(50% - 365px));
+    margin-top: 2em;
+}
+
+.commentBox{
+    background-color: var(--cl-white);
+    display: flex;
+    padding:1.5em;
+    border-radius: 10px;
+    margin-bottom:1.5em;
+
+}
+
+
+.commentBoxReply{
+    margin-left:5em;
+}
+
+.desktopCounter{
+    background-color: var(--cl-veryLightGray);
+    margin-right:1.5em;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:40px;
+    height:100px;
+    border-radius: 5px;
+    justify-content: space-around;
+    flex-shrink: 0;
+}
+
+
+.desktopCounter>span,
+.mobileCounter>span{
+    color:var(--cl-moderateBlue);
+    font-family: var(--ff-main);
+    font-weight: 500;
+}
+
+.iconPlus{
+    width:12px;
+    height:12px;
+}
+
+.iconMinus{
+    width:12px;
+    height:12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: .5em;
+    
+}
+
+.reply{
+    display:inline;
+    font-family: var(--ff-main);
+    color: var(--cl-moderateBlue);
+    font-weight: 500;
+    padding-left: .5em;
+}
+
+.replyRed{
+    color:var(--cl-softRed) !important;
+}
+
+.rightArea{
+    width:100%;
+}
+
+.rightArea>p{
+    font-family: var(--ff-main);
+    color: var(--cl-grayishBlue);
+    line-height: 1.5em;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+.left>*{
+    display:inline-block;
+}
+
+.left img{
+    width:32px;
+}
+
+.name{
+    font-family: var(--ff-main);
+    color: var(--cl-darkBlue);
+    font-weight: 500;
+    margin-left:1em;
+}
+
+.you{
+    background-color: var(--cl-moderateBlue);
+    color: white;
+    padding:.05em .4em .18em .4em;
+    margin-left: .5em;
+    border-radius: 5px;
+}
+
+
+.date{
+    font-family: var(--ff-main);
+    color: var(--cl-grayishBlue);
+    margin-left: 1.2em;
+}
+
+.right>*{
+    display:inline-block;
+}
+
+.mobileCounter{
+    background-color: var(--cl-veryLightGray);
+    width:100px;
+    height:40px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.mobileSection{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1em;
+}
+
+
+.replyBox{
+    padding:1.5em;
+    margin-bottom: 1em;
+    background-color: white;
+    display:flex;
+    border-radius: 10px;
+}
+.replyBox img{
+    width:40px;
+    height:40px;
+    margin-right: 1em;
+
+}
+
+textarea{
+    width:100%;
+    height:7em;
+    resize:none;
+    border-radius: 7px;
+    border: 1px solid var(--cl-lightGrayishBlue);
+    padding:.5em;
+    font-family: var(--ff-main);
+}
+
+.replyBox button{
+    border:none;
+    background-color: var(--cl-moderateBlue);
+    color:white;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-left:1em;
+    border-radius: 7px;
+    width: 8em;
+    height:3em;
+
+}
+/*--------------------------------------------------*/
+/*           Mobile Layout                        */
+/*--------------------------------------------------*/
+@media (max-width: 650px){
+
+    .desktopCounter{
+        display:none;
+    }
+   
+   .desktopReply{
+    display:none;
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   }
+   
+   
+   
+   
+   
+
+
+/*--------------------------------------------------*/
+/*            Desktop Layout                        */
+/*--------------------------------------------------*/
+@media (min-width: 651px){
+
+ .mobileSection{
+    display:none;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%); }
