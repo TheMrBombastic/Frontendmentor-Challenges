@@ -1,0 +1,479 @@
+/*-----------------------*/
+/*Reset                  */
+/*-----------------------*/
+
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture,
+ul,
+img,
+div{
+    margin: 0; 
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+/*-----------------------*/
+/*    Custom Properties  */
+/*-----------------------*/
+:root{
+    --darkBlue: hsl(233, 26%, 24%);
+    --limeGreen:hsl(136, 65%, 51%);
+    --brightCyan: hsl(192, 70%, 51%);
+    
+    --grayishBlue:hsl(233, 8%, 62%);
+    --lightGrayishBlue: hsl(220, 16%, 96%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --white:hsl(0, 0%, 100%);
+    --paddingMobile: 5vw;
+    --paddingDesktop:10vw;
+}
+
+/*--------------------------------------------------*/
+/*            allgemeines Layout                    */
+/*--------------------------------------------------*/
+
+
+/*--------------------------------------*/
+/*            header                    */
+/*--------------------------------------*/
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: var(--paddingMobile);
+    padding-right: var(--paddingMobile);
+}
+
+
+
+/*---------------------------------*/
+/*            header desktop       */
+/*---------------------------------*/
+
+@media (min-width:1001px){
+    #hamburger{
+        display:none;
+    }
+
+    header>a{
+        margin:0;
+    }
+  
+
+    header{
+        height: 5em;
+        padding-left:var(--paddingDesktop);
+        padding-right: var(--paddingDesktop);
+    }
+
+    header a {
+        text-decoration: none;
+        color: var(--grayishBlue);
+        padding:1.65em 0;
+        font-family: "Public Sans";
+    }
+    
+    header>ul>a:hover{
+        color: var(--darkBlue); 
+        border-bottom: 4px solid transparent;
+        border-image:linear-gradient(90deg, rgba(133,226,163,1) , rgba(128,212,223,1) );
+        border-image-slice: 1;
+        width:100%;
+    }
+    
+    header a+a{margin-left: 2em;}
+}
+
+/*-------------------------------*/
+/*         header mobile         */
+/*----------------------- -------*/
+
+@media (max-width:1000px){
+
+    header>ul,
+    header>a{
+        display:none !important;
+    }
+
+    header{
+        height: 3.6875em;
+    }
+
+
+}
+
+/*--------------------------------------*/
+/*               main                   */
+/*--------------------------------------*/
+/*------------------------------*/
+/*       main  mobile           */
+/*------------------------------*/
+.menu{
+    position: fixed;
+    width:70vw;
+    top: 10vh;
+    left: 15vw;
+    background-color: white;
+    padding: 2em;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.menu a{
+    display:block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--darkBlue);
+    font-family: "Public Sans";
+    font-size: 20px;
+}
+
+.menu a+a{
+    margin-top: 1.5em;
+}
+
+.menuBackground{
+    position:fixed;
+    left:0;
+    top:3.7em;
+    width:100vw;
+    height:calc(100vh - 3.7em);
+    background:linear-gradient(180deg, hsla(0, 0%, 0%, 0.741), hsla(230, 7%, 17%, 0.165));
+}
+
+.hero{
+    background-color: var(--veryLightGray);
+}
+
+.hero img{
+    width:100%;
+    padding:0 1em;
+}
+
+
+
+.picturePhones{
+    width:90%;
+    margin: 0 auto;
+    height: 80vw;
+    background-image: url(images/image-mockups.png);
+    background-size: 100%;
+    background-repeat:no-repeat;
+    background-position:0px -32vw;
+}
+
+.ornaments{
+    background-image: url(images/bg-intro-mobile.svg);
+    background-size: 100%;
+    background-position: 0 -15vw;
+    margin-bottom: 2em;
+}
+
+.heroText{
+    padding: 0 var(--paddingMobile) 5em var(--paddingMobile);
+    
+}
+
+h1{ 
+    font-family: "Public Sans";
+    color:var(--darkBlue);
+    font-weight: 200;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+p{
+    font-family: "Public Sans";
+    text-align: center;
+    line-height: 1.5em;
+    color: var(--grayishBlue);
+    margin-bottom: 2.5em;
+    font-size:14px;
+    line-height: 1.7em;
+}
+
+.gradientLink{
+    display:block;
+    width:7em;
+    text-align: center;
+    padding: .65em 2em;
+    text-decoration: none;
+    color: white;
+    font-family: "Public Sans";
+    font-weight: 400;
+    background: linear-gradient(90deg, rgba(133,226,163,1) , rgba(128,212,223,1) );
+    border-radius: 2em;}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article{
+    padding: 4em 4.5vw 0.5px 4.5vw;
+    background-color: var(--lightGrayishBlue);
+}
+
+article>div:first-of-type{
+    margin-bottom: 4em;
+}
+
+article img {
+    display:block;
+    width: 4.5em;
+    margin: 0 auto;
+}
+
+h2{
+    font-family: "Public Sans";
+    font-weight: 200;
+    font-size: 2em;
+    text-align: center;
+    color: var(--darkBlue);
+    margin-bottom: .7em;
+}
+
+h3{
+    font-family: "Public Sans";
+    color: var(--darkBlue);
+    font-weight: 200;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.articleTeaser{
+    background-color: var(--veryLightGray);
+    padding:5em 6vw;
+}
+
+.articleTeaser img{
+    width:100%;
+}
+
+.articles>div{
+    border-radius: 10px;
+    overflow:hidden;
+    margin-top: 2em;
+    background-color: var(--white);
+}
+
+.teaserText{
+    margin:1.5em 2em 2em 2em;
+}
+
+.author{
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: .8em;
+}
+
+h4{
+    font-family: "Public Sans";
+    font-weight: 200;
+    margin-bottom: .8em;
+
+}
+
+.teaser{
+    text-align: left;
+}
+
+/*------------------------------*/
+/*       main  desktop          */
+/*------------------------------*/
+
+@media (min-width:1001px){
+    .hero{
+        display:grid;
+        grid-template-areas: "a b";
+    }
+
+    .heroText{
+        padding-bottom: 0;
+    }
+
+    .ornaments{
+        margin-bottom: 0;
+        grid-area: b;
+        width:50vw;
+        background-image: url(images/bg-intro-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: 0 -110px;
+        background-size: 115%;
+        height: 50vw;
+        max-height: 1100px;
+    }
+
+    .picturePhones{
+        background-position: 80px -80px;
+        height:110%;
+        width:100%;
+    }
+
+    .heroText{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: var(--paddingDesktop);
+    }
+
+
+    h1, h2, h3, p{text-align: left;}
+
+    p{
+        max-width: 500px;
+    }
+
+    .heroText a{
+        margin-left:0;
+        margin-right:0;}
+
+    article{
+        padding-left:var(--paddingDesktop);
+    }
+
+    .sellingPoints{
+        display:flex;
+    }
+
+    .sellingPoints div+div{
+        margin-left: 2vw;
+    }
+    
+    
+
+    article img{
+        margin:0;
+    }
+
+    .articles{
+        display:flex;
+    }
+
+    .articleTeaser{
+        padding-left: var(--paddingDesktop);
+        padding-right: var(--paddingDesktop);
+    }
+
+    .articles>div+div{
+        margin-left:2vw;
+    
+    }
+    
+
+}
+
+
+
+/*--------------------------------------*/
+/*               footer mobile          */
+/*--------------------------------------*/
+
+footer{
+    background-color: var(--darkBlue);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+}
+
+.links1 a, .links2 a{
+    display:block;
+    text-align: center;
+    color:white;
+    font-family: "Public Sans";
+    font-size: 14px;
+}
+
+.icons img+img{
+    margin-left: .5em;
+}
+
+footer>div>div>img{
+    margin-bottom: 1.5em;
+}
+
+.icons{
+    margin-bottom: 1.5em;
+}
+
+.left a{
+    margin-bottom: .8em;
+}
+
+.links2{
+    margin-bottom: 1.5em;
+}
+
+footer .gradientLink{
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*--------------------------------------*/
+/*               footer desktop         */
+/*--------------------------------------*/
+@media (min-width:1001px){
+    footer{
+        padding-left: var(--paddingDesktop);
+        padding-right: var(--paddingDesktop);
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left a{
+        text-align: left;
+    }
+
+    .footerLinks{
+        display:flex;
+    }
+
+    .left{
+        display:flex;
+        width: 45%;
+        justify-content: space-between;
+    }
+
+    .links1{
+        margin-left: 20%;
+    }
+    
+    .links2{
+        margin-left: 20%;
+    }
+
+    footer .gradientLink{
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    .right{
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+}
+/*--------------------------------------------------*/
+/*           Frontend Mentor                        */
+/*--------------------------------------------------*/
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
